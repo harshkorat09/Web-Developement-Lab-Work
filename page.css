@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styling */
+header {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 15px 30px;
+}
+
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links input[type="text"] {
+  max-width: 300px;
+  margin: 10px 15px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+.nav-links a {
+  background-color: #fff;
+  color: #2575fc;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  background-color: #e2e6ea;
+  transform: scale(1.05);
+}
+
+/* Sections and headings */
+section {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #2575fc;
+  margin: 15px 0;
+}
+
+
+
+ul {
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Footer styling */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #f1f1f1;
+  padding: 30px 20px;
+}
+
+.footer-column {
+  flex: 1 1 160px;
+  margin: 10px;
+}
+
+footer h2 {
+    text-align: center;
+    color:white ;
+    margin: 15px 0;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  color:white ;
+  padding-bottom: 4px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.footer-column span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header input[type="text"] {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+  }
+}

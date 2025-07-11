@@ -3,15 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="page.css">
 <title>Git & GitHub - Udemy</title>
 </head>
 <body>
 <header>
-<span><b>Udemy</b></span>
-<input type="text" placeholder="Search About Courses">
-<button><a href="login.html">Log in</a></button>
-<button><a href="Signup.html">Register</a></button>
-<button><a href="index.html">Homepage</a></button>
+  <div class="header-container">
+    <span class="logo"><b>Udemy</b></span>
+    <nav class="nav-links">
+      <input class="search" type="text" placeholder="Search About Courses">
+      <a href="courses.html">Explore Courses</a>
+      <a href="login.html">Log in</a>
+      <a href="Signup.html">Register</a>
+      <a href="index.html">Homepage</a>
+    </nav>
+  </div>
 </header>
 <hr/>
 <section>
@@ -59,7 +65,6 @@
 </section>
 
 <hr/>
-<section>
 <footer>
   <h2>Explore Top Courses for CS Students</h2>
 
@@ -108,11 +113,10 @@
     </ul>
   </div>
 
-  <div class="footer-column">
+  <div class="footer-bottom">
     <span><b>Udemy</b> &copy;2025 Udemy, Inc.</span>
     <span>English</span>
   </div>
 </footer>
-</section>
 </body>
 </html>

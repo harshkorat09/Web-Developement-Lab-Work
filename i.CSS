@@ -18,6 +18,7 @@ header {
   padding: 15px 30px;
 }
 
+
 .header-container {
   display: flex;
   align-items: center;
@@ -109,7 +110,6 @@ header {
   transform: scale(1.05);
 }
 
-/* Headings */
 h2 {
   text-align: center;
   margin: 30px 0 20px;
@@ -117,7 +117,11 @@ h2 {
   color: #2575fc;
 }
 
-/* Featured courses table */
+.site-footer h2{
+
+  color: white;
+}
+
 .featured-courses {
   margin: 0 auto;
   border-spacing: 20px;
@@ -154,21 +158,19 @@ h2 {
   color: #555;
 }
 
-/* Testimonials */
 .testimonials {
   background: #fff;
   padding: 30px 20px;
   text-align: center;
 }
 
-.testimonials blockquote {
+.testimonials p {
   font-style: italic;
   color: #555;
   margin: 10px auto;
   max-width: 600px;
 }
 
-/* Subscribe section */
 .subscribe {
   background: #2575fc;
   color: white;
@@ -205,7 +207,6 @@ h2 {
   transform: scale(1.05);
 }
 
-/* Social media */
 .social-media {
   text-align: center;
   padding: 20px;
@@ -223,7 +224,6 @@ h2 {
   transform: scale(1.2);
 }
 
-/* Footer */
 .site-footer {
   background: linear-gradient(90deg, #6a11cb, #2575fc);
   color: #f1f1f1;
@@ -276,7 +276,6 @@ h2 {
   font-size: 0.9em;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
