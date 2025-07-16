@@ -62,35 +62,35 @@ header {
   transform: scale(1.05);
 }
 
-.breadcrumb {
+.b {
   padding: 10px 30px;
   font-size: 0.9em;
   color: #555;
 }
 
-.breadcrumb a {
+.b a {
   color: #2575fc;
   text-decoration: none;
 }
 
-.breadcrumb a:hover {
+.b a:hover {
   text-decoration: underline;
 }
 
 
-.hero {
+.h {
   text-align: center;
   padding: 60px 20px 40px;
   background: linear-gradient(90deg, #6a11cb, #2575fc);
   color: white;
 }
 
-.hero h1 {
+.h h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
 }
 
-.hero p {
+.h p {
   font-size: 1.2em;
   margin-bottom: 20px;
 }

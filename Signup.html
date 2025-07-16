@@ -25,15 +25,21 @@
 
 <main>
   <h2><b>Sign up with email</b></h2>
-  <form action="#" method="post">
-    <input type="text" name="fullname" placeholder="Full name" required>
+  <form action="#" onsubmit=" return ValidateForm()" method="post">
+    <input type="text" name="fullname" id="name" placeholder="Full name" required>
     <br>
-    <input type="email" name="email" placeholder="Email" required>
+    <input type="number" name="number" id="numb" placeholder="Enter mobile number" required>
+    <br>
+    <input type="email" name="email" id="email" placeholder="Email" required>
+    <br>
+    <input type="password" name="password" id="pass" placeholder="Enter password" required>
+    <br>
+    <input type="password" name="password" id="passw" placeholder="Confirm password" required>
     <br>
     <input type="checkbox" id="offers" name="offers">
     <label for="offers">Send me special offers, personalized recommendations and learning tips.</label>
     <br>
-    <button type="submit">&#x1F4E7 Continue with Email</button>
+    <button type="submit"  onclick="ValidateName()">&#x1F4E7 Continue with Email</button>
   </form>
 
   <div>
@@ -44,9 +50,9 @@
     <button type="button"><i class="fa-brands fa-apple"></i></button>
   </div>
   <br>
-  <span>By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</span>
+  <span>By signing up, you agree to our <a href="Terms.html">Terms of Use</a> and <a href="Privacy.html">Privacy Policy</a>.</span>
   <br>
-  <span>Already have an account? <a href="#">Log in</a></span>
+  <span>Already have an account? <a href="login.html">Log in</a></span>
 </main>
 <hr/>
 
@@ -90,7 +96,7 @@
         <li><a href="ProblemSolving.html">Problem Solving</a></li>
       </ul>
     </div>
-    
+
     <div class="footer-column">
       <h3>Company</h3>
       <ul>
@@ -108,3 +114,55 @@
 
 </body>
 </html>
+
+<script>
+  function ValidateName() {
+  const name = document.getElementById("name").value.trim();
+  const namePattern = /^[a-zA-Z\s'-]+$/;
+
+  if (name === "") {
+    alert("Name cannot be empty.");
+    return false;
+  }
+
+  if (!namePattern.test(name)) {
+    alert("Name contains invalid characters.");
+    return false;
+  }
+
+  if (name.length < 2) {
+    alert("Name is too short.");
+    return false;
+  }
+
+  if (name.length > 50) {
+    alert("Name is too long.");
+    return false;
+  }
+
+  return true;
+}
+
+ 
+
+  function validateMobileNumber(numb) {
+  const number = document.getElementById("numb").value.trim();
+
+  const pattern = /^[7-9][0-9]{9}$/; 
+
+  if(!pattern.test(numb)){
+    alert("Invalid Mobile No.");
+    return false;
+  }
+  return true;
+}
+
+
+
+
+function ValidateForm() {
+  return ValidateName();
+  return validateMobileNumber();
+}
+
+</script>

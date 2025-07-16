@@ -92,6 +92,22 @@ form input[type="email"] {
   margin-bottom: 15px;
 }
 
+form input[type="password"] {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+form input[type="number"] {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 250px;
+  margin-bottom: 15px;
+}
+
 form button[type="submit"] {
   background-color: #2575fc;
   color: #fff;
