@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign up to start learning</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
@@ -25,33 +25,36 @@
 
 <main>
   <h2><b>Sign up with email</b></h2>
-  <form action="#" onsubmit=" return ValidateForm()" method="post">
+  <form action="#" onsubmit="return validateForm()" method="post">
     <input type="text" name="fullname" id="name" placeholder="Full name" required>
-    <br>
-    <input type="number" name="number" id="numb" placeholder="Enter mobile number" required>
-    <br>
+    <p id="demo1"></p>
+
+    <input type="tel" name="number" id="numb" placeholder="Enter mobile number" required>
+    <p id="demo2"></p>
+
     <input type="email" name="email" id="email" placeholder="Email" required>
-    <br>
+    <p id="demo3"></p>
+
     <input type="password" name="password" id="pass" placeholder="Enter password" required>
-    <br>
-    <input type="password" name="password" id="passw" placeholder="Confirm password" required>
-    <br>
+    <p id="demo4"></p>
+
+    <input type="password" name="Confirmpass" id="Confirmpass" placeholder="Confirm password" required>
+    <p id="demo5"></p>
+
     <input type="checkbox" id="offers" name="offers">
     <label for="offers">Send me special offers, personalized recommendations and learning tips.</label>
     <br>
-    <button type="submit"  onclick="ValidateName()">&#x1F4E7 Continue with Email</button>
+    <button type="submit" onclick="return validateForm()">&#x1F4E7 Continue with Email</button>
   </form>
 
   <div>
-    <span>-------- Other Sign up options --------</span>
-    <br>
+    <span>-------- Other Sign up options --------</span><br>
     <button type="button"><i class="fa-brands fa-google"></i></button>
     <button type="button"><i class="fa-brands fa-facebook"></i></button>
     <button type="button"><i class="fa-brands fa-apple"></i></button>
   </div>
   <br>
-  <span>By signing up, you agree to our <a href="Terms.html">Terms of Use</a> and <a href="Privacy.html">Privacy Policy</a>.</span>
-  <br>
+  <span>By signing up, you agree to our <a href="Terms.html">Terms of Use</a> and <a href="Privacy.html">Privacy Policy</a>.</span><br>
   <span>Already have an account? <a href="login.html">Log in</a></span>
 </main>
 <hr/>
@@ -105,7 +108,7 @@
       </ul>
     </div>
 
-    <div class="footer-column">
+    <div class="footer-bottom">
       <span><b>Udemy</b> &copy;2025 Udemy, Inc.</span>
       <span>English</span>
     </div>
@@ -113,56 +116,64 @@
 </section>
 
 </body>
-</html>
 
 <script>
-  function ValidateName() {
+function validateForm() {
+  let isValid = true;
+
   const name = document.getElementById("name").value.trim();
-  const namePattern = /^[a-zA-Z\s'-]+$/;
+  const mobile = document.getElementById("numb").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("pass").value;
+  const confirmPassword = document.getElementById("Confirmpass").value;
 
-  if (name === "") {
-    alert("Name cannot be empty.");
-    return false;
-  }
-
-  if (!namePattern.test(name)) {
-    alert("Name contains invalid characters.");
-    return false;
-  }
-
-  if (name.length < 2) {
-    alert("Name is too short.");
-    return false;
-  }
-
-  if (name.length > 50) {
-    alert("Name is too long.");
-    return false;
-  }
-
-  return true;
-}
+  
+  name.textContent = "";
+  mobile.textContent = "";
+  email.textContent = "";
+  password.textContent = "";
+  confirmPassword.textContent = "";
 
  
+const namePattern = /^[A-Za-z\s]{2,}$/;
+if (!namePattern.test(name)) {
+  name.textContent = "Enter a valid name (only letters, at least 2 characters).";
+  name.style.color = "red";
+  isValid = false;
+}
 
-  function validateMobileNumber(numb) {
-  const number = document.getElementById("numb").value.trim();
 
-  const pattern = /^[7-9][0-9]{9}$/; 
-
-  if(!pattern.test(numb)){
-    alert("Invalid Mobile No.");
-    return false;
+  
+  if (!/^\d{10}$/.test(mobile)) {
+    mobile.textContent = "Enter a valid 10-digit mobile number.";
+    mobile.style.color = "red";
+    isValid = false;
   }
-  return true;
+
+  
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    email.textContent = "Enter a valid email address.";
+    email.style.color = "red";
+    isValid = false;
+  }
+
+  
+  if (password.length < 6) {
+    password.textContent = "Password must be at least 6 characters.";
+    password.style.color = "red";
+    isValid = false;
+  }
+
+  
+  if (password !== confirmPassword) {
+    confirmPassword.textContent = "Passwords do not match.";
+    confirmPassword.style.color = "red";
+    isValid = false;
+  }
+
+  return isValid;
 }
-
-
-
-
-function ValidateForm() {
-  return ValidateName();
-  return validateMobileNumber();
-}
-
 </script>
+
+</html>

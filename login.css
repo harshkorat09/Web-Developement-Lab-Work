@@ -100,7 +100,7 @@ form input[type="password"] {
   margin-bottom: 15px;
 }
 
-form input[type="number"] {
+form input[type="tel"] {
   padding: 10px 15px;
   border: 1px solid #ccc;
   border-radius: 20px;

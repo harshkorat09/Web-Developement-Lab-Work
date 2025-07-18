@@ -26,12 +26,14 @@
 
 <main>
   <h2><b>Log in to continue your learning journey</b></h2>
-  <form action="#" method="post">
-    <input type="email" name="email" placeholder="Email" required>
+  <form action="#" method="post" onsubmit="return validateForm()">
+    <input type="email" name="email" id="email" placeholder="Email" required>
     <br>
-    <input type="password" name="password" placeholder="Enter password" required>
+    <p id="demo1"></p>
+    <input type="password" name="password" id="pass" placeholder="Enter password" required>
     <br>
-    <button type="submit">&#x1F4E7 Continue with Email</button>
+    <p id="demo2"></p>
+    <button type="submit" onclick="return validateForm()">&#x1F4E7 Continue with Email</button>
   </form>
 
   <p>-------- Other Log in options --------</p>
@@ -103,4 +105,37 @@
 </footer>
 
 </body>
+
+<script>
+function validateForm() {
+  let isValid = true;
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("pass").value;
+
+  
+  email.textContent = "";
+  password.textContent = "";
+ 
+
+
+  
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    email.textContent = "Enter a valid email address.";
+    email.style.color = "red";
+    isValid = false;
+  }
+
+  
+  if (password.length < 6) {
+    password.textContent = "Password must be at least 6 characters.";
+    password.style.color = "red";
+    isValid = false;
+  }
+
+  return isValid;
+}
+</script>
+
 </html>
