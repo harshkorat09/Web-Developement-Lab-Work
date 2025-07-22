@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign up to start learning</title>
+  <link rel="stylesheet" href="sign.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
@@ -21,168 +21,163 @@
     </nav>
   </div>
 </header>
-<hr/>
 
 <main>
-  <h2><b>Sign up with email</b></h2>
-  <form action="#" onsubmit="return validateForm()" method="post">
-    <input type="text" name="fullname" id="name" placeholder="Full name" required>
-    <p id="demo1"></p>
+  <div class="form-box">
+    <h2>Sign up with email</h2>
+    <form onsubmit="return validateForm()" method="post" novalidate>
+      <input type="text" name="fullname" id="name" placeholder="Full name" required>
+      <p id="demo1" class="error-msg"></p>
 
-    <input type="tel" name="number" id="numb" placeholder="Enter mobile number" required>
-    <p id="demo2"></p>
+      <input type="tel" name="number" id="numb" placeholder="Mobile number" required>
+      <p id="demo2" class="error-msg"></p>
 
-    <input type="email" name="email" id="email" placeholder="Email" required>
-    <p id="demo3"></p>
+      <input type="email" name="email" id="email" placeholder="Email address" required>
+      <p id="demo3" class="error-msg"></p>
 
-    <input type="password" name="password" id="pass" placeholder="Enter password" required>
-    <p id="demo4"></p>
+      <input type="password" name="password" id="pass" placeholder="Enter password" required>
+      <p id="demo4" class="error-msg"></p>
 
-    <input type="password" name="Confirmpass" id="Confirmpass" placeholder="Confirm password" required>
-    <p id="demo5"></p>
+      <input type="password" name="Confirmpass" id="Confirmpass" placeholder="Confirm password" required>
+      <p id="demo5" class="error-msg"></p>
 
-    <input type="checkbox" id="offers" name="offers">
-    <label for="offers">Send me special offers, personalized recommendations and learning tips.</label>
-    <br>
-    <button type="submit" onclick="return validateForm()">&#x1F4E7 Continue with Email</button>
-  </form>
+      <label>
+        <input type="checkbox" id="offers" name="offers">
+        Send me special offers and learning tips.
+      </label>
 
-  <div>
-    <span>-------- Other Sign up options --------</span><br>
-    <button type="button"><i class="fa-brands fa-google"></i></button>
-    <button type="button"><i class="fa-brands fa-facebook"></i></button>
-    <button type="button"><i class="fa-brands fa-apple"></i></button>
+      <button type="submit">&#x1F4E7; Continue with Email</button>
+    </form>
+
+    <div class="divider">Other Sign up options</div>
+    <div class="social-buttons">
+      <button><i class="fab fa-google"></i></button>
+      <button><i class="fab fa-facebook"></i></button>
+      <button><i class="fab fa-apple"></i></button>
+    </div>
+
+    <p class="legal-text">
+      By signing up, you agree to our <a href="Terms.html">Terms</a> and <a href="Privacy.html">Privacy Policy</a>.
+    </p>
+    <p>Already have an account? <a href="login.html">Log in</a></p>
   </div>
-  <br>
-  <span>By signing up, you agree to our <a href="Terms.html">Terms of Use</a> and <a href="Privacy.html">Privacy Policy</a>.</span><br>
-  <span>Already have an account? <a href="login.html">Log in</a></span>
 </main>
+
 <hr/>
 
-<section>
-  <footer>
-    <h2>Explore Top Courses for CS Students</h2>
+<footer>
+  <h2>Explore Top Courses for CS Students</h2>
 
-    <div class="footer-column">
-      <h3>Web & Programming</h3>
-      <ul>
-        <li><a href="HTMLandCSS.html">HTML & CSS</a></li>
-        <li><a href="JavaScript.html">JavaScript</a></li>
-        <li><a href="java.html">Python Programming</a></li>
-        <li><a href="java.html">Java Programming</a></li>
-      </ul>
-    </div>
+  <div class="footer-column">
+    <h3>Web & Programming</h3>
+    <ul>
+      <li><a href="HTMLandCSS.html">HTML & CSS</a></li>
+      <li><a href="JavaScript.html">JavaScript</a></li>
+      <li><a href="java.html">Python Programming</a></li>
+      <li><a href="java.html">Java Programming</a></li>
+    </ul>
+  </div>
 
-    <div class="footer-column">
-      <h3>Data & AI</h3>
-      <ul>
-        <li><a href="DSA.html">Data Structures & Algorithms</a></li>
-        <li><a href="ML.html">Machine Learning</a></li>
-        <li><a href="DataScience.html">Data Science</a></li>
-        <li><a href="SQLDatabases.html">SQL & Databases</a></li>
-      </ul>
-    </div>
+  <div class="footer-column">
+    <h3>Data & AI</h3>
+    <ul>
+      <li><a href="DSA.html">Data Structures & Algorithms</a></li>
+      <li><a href="ML.html">Machine Learning</a></li>
+      <li><a href="DataScience.html">Data Science</a></li>
+      <li><a href="SQLDatabases.html">SQL & Databases</a></li>
+    </ul>
+  </div>
 
-    <div class="footer-column">
-      <h3>Cloud & DevOps</h3>
-      <ul>
-        <li><a href="AWSBasics.html">AWS Basics</a></li>
-        <li><a href="DockerContainers.html">Docker & Containers</a></li>
-        <li><a href="LinuxEssentials.html">Linux Essentials</a></li>
-      </ul>
-    </div>
+  <div class="footer-column">
+    <h3>Cloud & DevOps</h3>
+    <ul>
+      <li><a href="AWSBasics.html">AWS Basics</a></li>
+      <li><a href="DockerContainers.html">Docker & Containers</a></li>
+      <li><a href="LinuxEssentials.html">Linux Essentials</a></li>
+    </ul>
+  </div>
 
-    <div class="footer-column">
-      <h3>Other Useful Skills</h3>
-      <ul>
-        <li><a href="GitGitHub.html">Git & GitHub</a></li>
-        <li><a href="ProblemSolving.html">Problem Solving</a></li>
-      </ul>
-    </div>
+  <div class="footer-column">
+    <h3>Other Useful Skills</h3>
+    <ul>
+      <li><a href="GitGitHub.html">Git & GitHub</a></li>
+      <li><a href="ProblemSolving.html">Problem Solving</a></li>
+    </ul>
+  </div>
 
-    <div class="footer-column">
-      <h3>Company</h3>
-      <ul>
-        <li><a href="AboutUs.html">About Us</a></li>
-        <li><a href="ContactUs.html">Contact Us</a></li>
-      </ul>
-    </div>
+  <div class="footer-column">
+    <h3>Company</h3>
+    <ul>
+      <li><a href="AboutUs.html">About Us</a></li>
+      <li><a href="ContactUs.html">Contact Us</a></li>
+    </ul>
+  </div>
 
-    <div class="footer-bottom">
-      <span><b>Udemy</b> &copy;2025 Udemy, Inc.</span>
-      <span>English</span>
-    </div>
-  </footer>
-</section>
-
-</body>
+  <div class="footer-bottom">
+    <span><b>Udemy</b> &copy;2025 Udemy, Inc.</span>
+    <span>English</span>
+  </div>
+</footer>
 
 <script>
 function validateForm() {
+  let valid = true;
 
   const name = document.getElementById("name").value.trim();
   const mobile = document.getElementById("numb").value.trim();
   const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("pass").value;
-  const confirmPassword = document.getElementById("Confirmpass").value;
+  const password = document.getElementById("pass").value.trim();
+  const confirmPassword = document.getElementById("Confirmpass").value.trim();
 
-  
+  // Clear all previous messages
   document.getElementById("demo1").textContent = "";
   document.getElementById("demo2").textContent = "";
   document.getElementById("demo3").textContent = "";
   document.getElementById("demo4").textContent = "";
   document.getElementById("demo5").textContent = "";
 
-  
-const namePattern = /^[A-Za-z\s]{2,}$/;
-if (!namePattern.test(name)) {
-  document.getElementById("demo1").textContent = "Enter a valid name (only letters, at least 2 characters).";
-  document.getElementById("demo1").style.color = "red";
-}
+  // Name validation
+  const namePattern = /^[A-Za-z\s]{2,}$/;
+  if (!namePattern.test(name)) {
+    document.getElementById("demo1").textContent = "Enter a valid name (letters only).";
+    document.getElementById("demo1").style.color = "red";
+    valid = false;
+  }
 
-
-  
-  if (!/^\d{10}$/.test(mobile)) {
+  // Mobile number validation
+  if (!/^[6-9]\d{9}$/.test(mobile)) {
     document.getElementById("demo2").textContent = "Enter a valid 10-digit mobile number.";
     document.getElementById("demo2").style.color = "red";
+    valid = false;
   }
 
-  
+  // Email validation
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
-    document.getElementById("demo3").textContent = "Enter a valid email address.";
+    document.getElementById("demo3").textContent = "Invalid email address.";
     document.getElementById("demo3").style.color = "red";
+    valid = false;
   }
 
+  // Password validation
+  const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])[\S]{8,}$/;
+  if (!passwordPattern.test(password)) {
+    document.getElementById("demo4").textContent ="Password must include uppercase, lowercase, number, special char and be 8+ characters.";
+      document.getElementById("demo4").style.color = "red";
+    valid = false;
+  }
 
-if (password.length < 8) {
-  document.getElementById("demo4").textContent = "Password must be at least 8 characters.";
-  document.getElementById("demo4").style.color = "red";
-} else if (!/[A-Z]/.test(password)) {
-  document.getElementById("demo4").textContent = "Password must contain at least one uppercase letter.";
-  document.getElementById("demo4").style.color = "red";
-} else if (!/[a-z]/.test(password)) {
-  document.getElementById("demo4").textContent = "Password must contain at least one lowercase letter.";
-  document.getElementById("demo4").style.color = "red";
-} else if (!/\d/.test(password)) {
-  document.getElementById("demo4").textContent = "Password must contain at least one number.";
-  document.getElementById("demo4").style.color = "red";
-} else if (!/[^A-Za-z0-9]/.test(password)) {
-  document.getElementById("demo4").textContent = "Password must contain at least one special character.";
-  document.getElementById("demo4").style.color = "red";
-} else if (/\s/.test(password)) {
-  document.getElementById("demo4").textContent = "Password should not contain spaces.";
-  document.getElementById("demo4").style.color = "red";
-}
-
-
-  
+  // Confirm password validation
   if (password !== confirmPassword) {
     document.getElementById("demo5").textContent = "Passwords do not match.";
     document.getElementById("demo5").style.color = "red";
+    valid = false;
   }
 
+  return valid;
 }
 </script>
 
+
+</body>
 </html>
