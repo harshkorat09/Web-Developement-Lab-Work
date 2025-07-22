@@ -6,8 +6,9 @@
   <title>Top Free CS Courses - Udemy Clone</title>
   <meta name="description" content="Discover top free online courses for computer science students: HTML, CSS, Python, Java, AI, cloud, and more!">
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="courses.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <link rel="stylesheet" href="i.CSS">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -23,97 +24,102 @@
   </div>
 </header>
 
-<hr/>
+<hr>
 
 <nav class="b">
   <a href="index.html">Home</a> &gt; <span>Courses</span>
 </nav>
 
-<section class="h">
+<section class="h" data-aos="fade-down">
   <h1>Top Free & Popular CS Courses</h1>
   <p>Start learning essential skills in web, AI, data, and more.</p>
 </section>
 
-
-<section>
-  <h2>Explore Courses</h2>
-  <p style="text-align: center; max-width: 600px; margin: 0 auto 20px;">
+<section data-aos="fade-up">
+  <h2 style="text-align:center;">Explore Courses</h2>
+  <p style="text-align:center; max-width:600px; margin:0 auto 20px;">
     Discover the best courses to boost your skills in programming, data science, AI, and more — all for free!
   </p>
 
-  <table align="center" cellpadding="10" class="featured-courses">
-    <tr>
-      <td align="center">
-        <a href="HTMLandCSS.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/320px-HTML5_logo_and_wordmark.svg.png" width="120" alt="HTML & CSS"></a>
-        <div>HTML & CSS<br><small>Design responsive, modern websites.</small></div>
-      </td>
-      <td align="center">
-        <a href="JavaScript.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/320px-JavaScript-logo.png" width="120" alt="JavaScript"></a>
-        <div>JavaScript<br><small>Make your websites interactive.</small></div>
-      </td>
-      <td align="center">
-        <a href="Python.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/320px-Python-logo-notext.svg.png" width="120" alt="Python"></a>
-        <div>Python Programming<br><small>Popular language for web, AI & more.</small></div>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <a href="java.html"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" width="120" alt="Java"></a>
-        <div>Java Programming<br><small>Build apps & enterprise solutions.</small></div>
-      </td>
-      <td align="center">
-        <a href="DSA.html"><img src="D.jpg" width="120" alt="DSA"></a>
-        <div>Data Structures & Algorithms<br><small>Essential for coding interviews & logic building.</small></div>
-      </td>
-      <td align="center">
-        <a href="ML.html"><img src="m.jpg" width="120" alt="ML"></a>
-        <div>Machine Learning<br><small>Build AI models and predictive systems.</small></div>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <a href="DataScience.html"><img src="Da.jpg" width="120" alt="Data Science"></a>
-        <div>Data Science<br><small>Analyze data and discover insights.</small></div>
-      </td>
-      <td align="center">
-        <a href="SQLDatabases.html"><img src="Q.png" width="120" alt="SQL"></a>
-        <div>SQL & Databases<br><small>Manage and query data efficiently.</small></div>
-      </td>
-      <td align="center">
-        <a href="AWSBasics.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/320px-Amazon_Web_Services_Logo.svg.png" width="120" alt="AWS"></a>
-        <div>AWS Basics<br><small>Introduction to Amazon's cloud platform.</small></div>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <a href="DockerContainers.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Docker_%28container_engine%29_logo.svg/320px-Docker_%28container_engine%29_logo.svg.png" width="120" alt="Docker"></a>
-        <div>Docker & Containers<br><small>Package and deploy applications easily.</small></div>
-      </td>
-      <td align="center">
-        <a href="LinuxEssentials.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/320px-Tux.svg.png" width="120" alt="Linux"></a>
-        <div>Linux Essentials<br><small>Basics of using and working in Linux.</small></div>
-      </td>
-      <td align="center">
-        <a href="GitGitHub.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/320px-Git-logo.svg.png" width="120" alt="Git"></a>
-        <div>Git & GitHub<br><small>Version control and collaboration.</small></div>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <a href="ProblemSolving.html"><img src="P.jpg" width="120" alt="Problem Solving"></a>
-        <div>Problem Solving<br><small>Sharpen logic and coding skills.</small></div>
-      </td>
-    </tr>
-  </table>
+  <div class="course-grid">
+    <!-- Row 1 -->
+    <div class="course-box" data-aos="zoom-in">
+      <a href="HTMLandCSS.html"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML CSS"></a>
+      <h3>HTML & CSS</h3>
+      <p>Design responsive, modern websites.</p>
+    </div>
+    <div class="course-box" data-aos="zoom-in">
+      <a href="JavaScript.html"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"></a>
+      <h3>JavaScript</h3>
+      <p>Make your websites interactive.</p>
+    </div>
+    <div class="course-box" data-aos="zoom-in">
+      <img src="images/python.png" alt="Python Logo">
+      <h3>Python Programming</h3>
+      <p>Popular language for web, AI & more.</p>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="course-box" data-aos="zoom-in">
+      <a href="java.html"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java"></a>
+      <h3>Java Programming</h3>
+      <p>Build apps & enterprise solutions.</p>
+    </div>
+    <div class="course-box" data-aos="zoom-in">
+      <a href="DSA.html"><img src="D.jpg" alt="DSA"></a>
+      <h3>Data Structures & Algorithms</h3>
+      <p>Essential for coding interviews.</p>
+    </div>
+    <div class="course-box" data-aos="zoom-in">
+      <a href="ML.html"><img src="m.jpg" alt="ML"></a>
+      <h3>Machine Learning</h3>
+      <p>Build AI models and systems.</p>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="course-box" data-aos="zoom-in">
+      <a href="DataScience.html"><img src="Da.jpg" alt="Data Science"></a>
+      <h3>Data Science</h3>
+      <p>Analyze data and discover insights.</p>
+    </div>
+    <div class="course-box" data-aos="zoom-in">
+      <a href="SQLDatabases.html"><img src="Q.png" alt="SQL"></a>
+      <h3>SQL & Databases</h3>
+      <p>Manage and query data efficiently.</p>
+    </div>
+    <div class="course-box" data-aos="zoom-in">
+      <a href="AWSBasics.html"><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS"></a>
+      <h3>AWS Basics</h3>
+      <p>Intro to Amazon's cloud platform.</p>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="course-box" data-aos="zoom-in">
+      <a href="DockerContainers.html"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker"></a>
+      <h3>Docker & Containers</h3>
+      <p>Package and deploy applications.</p>
+    </div>
+    <div class="course-box" data-aos="zoom-in">
+      <a href="LinuxEssentials.html"><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux"></a>
+      <h3>Linux Essentials</h3>
+      <p>Basics of Linux OS.</p>
+    </div>
+    <div class="course-box" data-aos="zoom-in">
+      <a href="GitGitHub.html"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git"></a>
+      <h3>Git & GitHub</h3>
+      <p>Version control and collaboration.</p>
+    </div>
+
+    <!-- Row 5 -->
+    <div class="course-box" data-aos="zoom-in">
+      <a href="ProblemSolving.html"><img src="P.jpg" alt="Problem Solving"></a>
+      <h3>Problem Solving</h3>
+      <p>Sharpen logic and coding skills.</p>
+    </div>
+  </div>
 </section>
 
-<section class="testimonials">
-  <h2>What Learners Say</h2>
-  <blockquote>"Great courses to kickstart your career!" - Ravi</blockquote>
-  <blockquote>"Simple, free and high-quality content." - Ananya</blockquote>
-</section>
-
-<section class="subscribe">
+<section class="subscribe" data-aos="fade-up">
   <h2>Stay Updated!</h2>
   <form>
     <input type="email" placeholder="Your email">
@@ -128,7 +134,7 @@
   <a href="#"><i class="fab fa-linkedin"></i></a>
 </section>
 
-<hr/>
+<hr>
 
 <footer class="site-footer">
   <h2>Explore Top Courses for CS Students</h2>
@@ -136,50 +142,59 @@
   <div class="footer-column">
     <h3>Web & Programming</h3>
     <ul>
-      <li><a href="HTMLandCSS.html">HTML & CSS</a></li>
-      <li><a href="JavaScript.html">JavaScript</a></li>
-      <li><a href="Python.html">Python Programming</a></li>
-      <li><a href="java.html">Java Programming</a></li>
+      <li><a href="HTMLandCSS.html" data-aos="fade-up">HTML & CSS</a></li>
+      <li><a href="JavaScript.html" data-aos="fade-up">JavaScript</a></li>
+      <li><a href="Python.html" data-aos="fade-up">Python Programming</a></li>
+      <li><a href="java.html" data-aos="fade-up">Java Programming</a></li>
     </ul>
   </div>
 
   <div class="footer-column">
     <h3>Data & AI</h3>
     <ul>
-      <li><a href="DSA.html">Data Structures & Algorithms</a></li>
-      <li><a href="ML.html">Machine Learning</a></li>
-      <li><a href="DataScience.html">Data Science</a></li>
-      <li><a href="SQLDatabases.html">SQL & Databases</a></li>
+      <li><a href="DSA.html" data-aos="fade-up">Data Structures & Algorithms</a></li>
+      <li><a href="ML.html" data-aos="fade-up">Machine Learning</a></li>
+      <li><a href="DataScience.html" data-aos="fade-up">Data Science</a></li>
+      <li><a href="SQLDatabases.html" data-aos="fade-up">SQL & Databases</a></li>
     </ul>
   </div>
 
   <div class="footer-column">
     <h3>Cloud & DevOps</h3>
     <ul>
-      <li><a href="AWSBasics.html">AWS Basics</a></li>
-      <li><a href="DockerContainers.html">Docker & Containers</a></li>
-      <li><a href="LinuxEssentials.html">Linux Essentials</a></li>
+      <li><a href="AWSBasics.html" data-aos="fade-up">AWS Basics</a></li>
+      <li><a href="DockerContainers.html" data-aos="fade-up">Docker & Containers</a></li>
+      <li><a href="LinuxEssentials.html" data-aos="fade-up">Linux Essentials</a></li>
     </ul>
   </div>
 
   <div class="footer-column">
     <h3>Other Useful Skills</h3>
     <ul>
-      <li><a href="GitGitHub.html">Git & GitHub</a></li>
-      <li><a href="ProblemSolving.html">Problem Solving</a></li>
+      <li><a href="GitGitHub.html" data-aos="fade-up">Git & GitHub</a></li>
+      <li><a href="ProblemSolving.html" data-aos="fade-up">Problem Solving</a></li>
     </ul>
   </div>
 
   <div class="footer-column">
     <h3>Company</h3>
     <ul>
-      <li><a href="AboutUs.html">About Us</a></li>
-      <li><a href="ContactUs.html">Contact Us</a></li>
-      <li><a href="Terms.html">Terms of Use</a></li>
-      <li><a href="Privacy.html">Privacy Policy</a></li>
+      <li><a href="AboutUs.html" data-aos="fade-up">About Us</a></li>
+      <li><a href="ContactUs.html" data-aos="fade-up">Contact Us</a></li>
+      <li><a href="Terms.html" data-aos="fade-up">Terms of Use</a></li>
+      <li><a href="Privacy.html" data-aos="fade-up">Privacy Policy</a></li>
     </ul>
   </div>
 
   <div class="footer-bottom">
     <span><b>Udemy</b> &copy;2025 Udemy, Inc.</span>
-    <span>
+    <span>English</span>
+  </div>
+</footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>

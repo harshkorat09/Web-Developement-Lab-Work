@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="a.css">
   <title>About Us - Udemy</title>
+  <link rel="stylesheet" href="a.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
 
-<!-- Header -->
+
 <header>
   <div class="header-container">
     <span class="logo"><b>Udemy</b></span>
@@ -23,9 +25,8 @@
 </header>
 <hr/>
 
-<!-- Main content -->
 <main>
-  <section>
+  <section data-aos="fade-up">
     <h2 style="text-align:center;">About Us</h2>
     <p style="max-width:800px; margin:auto; text-align:justify; font-size:1.1em;">
       Welcome to Udemy – your online destination to learn anything, anytime, from anywhere!
@@ -34,14 +35,14 @@
     </p>
   </section>
 
-  <section>
+  <section data-aos="fade-right">
     <h3 style="text-align:center;">Our Mission</h3>
     <p style="max-width:800px; margin:auto; text-align:justify;">
       To empower learners worldwide by providing free, carefully curated computer science courses covering programming, AI, data, cloud, and more. We believe knowledge should be open and available to help everyone thrive in the digital world.
     </p>
   </section>
 
-  <section>
+  <section data-aos="zoom-in-up">
     <h3 style="text-align:center;">What We Offer</h3>
     <ul style="max-width:800px; margin:auto;">
       <li>Free and beginner-friendly courses in HTML, CSS, JavaScript, Python, Java, and more</li>
@@ -51,7 +52,7 @@
     </ul>
   </section>
 
-  <section>
+  <section data-aos="fade-left">
     <h3 style="text-align:center;">Why Choose Us?</h3>
     <ul style="max-width:800px; margin:auto;">
       <li>Learn at your own pace, anytime and anywhere</li>
@@ -61,14 +62,14 @@
     </ul>
   </section>
 
-  <section>
+  <section data-aos="fade-up-right">
     <h3 style="text-align:center;">Meet the Community</h3>
     <p style="max-width:800px; margin:auto; text-align:justify;">
       Thousands of learners like you are already exploring new skills, building projects, and sharing knowledge through our platform. Join our growing community and see how far you can go!
     </p>
   </section>
 
-  <section>
+  <section data-aos="zoom-in">
     <h3 style="text-align:center;">Start Learning Today</h3>
     <p style="max-width:800px; margin:auto; text-align:center;">
       <a href="Signup.html">Sign up</a> and start your journey to becoming a better developer and thinker.  
@@ -77,7 +78,6 @@
   </section>
 </main>
 
-<!-- Footer -->
 <hr/>
 <footer>
   <h2>Explore Top Courses for CS Students</h2>
@@ -132,6 +132,9 @@
     <span>English</span>
   </div>
 </footer>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
