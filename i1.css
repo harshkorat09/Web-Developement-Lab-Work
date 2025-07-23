@@ -23,6 +23,7 @@ header { background:linear-gradient(90deg,#6a11cb,#2575fc); color:white; padding
 .cta-button { background:#fff; color:#2575fc; text-decoration:none; padding:10px 20px; border-radius:25px; font-weight:bold; transition:background .3s, transform .2s; }
 .cta-button:hover { background:#e2e6ea; transform:scale(1.05); }
 
+
 /* Stats */
 .stats-container { text-align:center; padding:20px; }
 .stats-container h2 { font-size:2em; color:#2575fc; }
@@ -48,6 +49,8 @@ header { background:linear-gradient(90deg,#6a11cb,#2575fc); color:white; padding
 .subscribe input[type="email"] { padding:8px 14px; border:none; border-radius:20px; margin-right:8px; width:200px; max-width:80%; }
 .subscribe button { background:#fff; color:#2575fc; border:none; padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:500; transition:background .3s, transform .2s; }
 .subscribe button:hover { background:#e2e6ea; transform:scale(1.05); }
+
+.featured-section h2{text-align: center; color:#2575fc}
 
 /* Social */
 .social-media { text-align:center; padding:20px; }
