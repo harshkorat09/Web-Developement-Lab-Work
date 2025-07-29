@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Problem Solving - Udemy</title>
-  <link rel="stylesheet" href="page.css">
+  <title>Problem Solving MCQs</title>
+  <link rel="stylesheet" href="ProblemSolving.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+
   <header>
     <div class="header-container">
       <span class="logo"><b>Udemy</b></span>
@@ -21,69 +22,61 @@
       </nav>
     </div>
   </header>
-  <hr/>
 
-  <section data-aos="fade-up">
-    <h2>Problem Solving</h2>
-    <p>Sharpen your analytical thinking and algorithmic skills to solve problems efficiently — crucial for coding interviews and real-world projects.</p>
+  <section class="intro" data-aos="fade-up">
+    <h2>Problem Solving – MCQ Practice</h2>
+    <p>Test your understanding of algorithmic thinking, patterns, and time-space complexity.</p>
   </section>
 
-  <section data-aos="fade-up">
-    <h3>Topics Covered</h3>
-    <ul>
-      <li>Patterns & Techniques</li>
-      <li>Recursion & Backtracking</li>
-      <li>Greedy, Divide & Conquer</li>
-      <li>Searching and Sorting</li>
-      <li>Graphs and Trees</li>
-      <li>Bit Manipulation</li>
-    </ul>
-  </section>
-
-  <section data-aos="fade-up">
-    <h3>What You’ll Learn</h3>
-    <ul>
-      <li>Break down complex problems into smaller subproblems</li>
-      <li>Apply logic and reasoning to build solutions</li>
-      <li>Write optimized code for interviews and contests</li>
-    </ul>
-  </section>
-
-  <section data-aos="fade-up">
-    <h3>Why Problem Solving Matters</h3>
-    <ul>
-      <li>Essential for cracking coding interviews</li>
-      <li>Core skill for competitive programming</li>
-      <li>Improves logical and computational thinking</li>
-    </ul>
-  </section>
-
-  <section data-aos="fade-up">
-    <h3>Practice Platforms</h3>
-    <ul>
-      <li><a href="https://leetcode.com" target="_blank">LeetCode</a></li>
-      <li><a href="https://www.hackerrank.com/" target="_blank">HackerRank</a></li>
-      <li><a href="https://codeforces.com" target="_blank">Codeforces</a></li>
-      <li><a href="https://www.codechef.com/" target="_blank">CodeChef</a></li>
-    </ul>
-  </section>
-
-  <section data-aos="fade-up">
-    <h3>Sample Lesson</h3>
-    <div style="text-align:center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/t1IT6a5FBCg" frameborder="0" allowfullscreen></iframe>
+  <section class="mcq-section" data-aos="fade-up">
+    <div class="mcq-question">
+      <p><strong>Q1:</strong> Which of the following problems can be solved using a greedy algorithm?</p>
+      <label><input type="radio" name="q1"> Fibonacci Number</label>
+      <label><input type="radio" name="q1"> Tower of Hanoi</label>
+      <label><input type="radio" name="q1"> Activity Selection </label>
+      <label><input type="radio" name="q1"> Binary Search Tree Traversal</label>
     </div>
+
+    <div class="mcq-question">
+      <p><strong>Q2:</strong> What is the time complexity of merge sort in the worst case?</p>
+      <label><input type="radio" name="q2"> O(n)</label>
+      <label><input type="radio" name="q2"> O(n log n) </label>
+      <label><input type="radio" name="q2"> O(n²)</label>
+      <label><input type="radio" name="q2"> O(1)</label>
+    </div>
+
+    <div class="mcq-question">
+      <p><strong>Q3:</strong> Which data structure is used in Breadth-First Search (BFS)?</p>
+      <label><input type="radio" name="q3"> Stack</label>
+      <label><input type="radio" name="q3"> Queue </label>
+      <label><input type="radio" name="q3"> Priority Queue</label>
+      <label><input type="radio" name="q3"> HashMap</label>
+    </div>
+
+    <div class="mcq-question">
+      <p><strong>Q4:</strong> Dynamic programming is mainly used to solve problems that exhibit:</p>
+      <label><input type="radio" name="q4"> Divide and Conquer</label>
+      <label><input type="radio" name="q4"> Overlapping Subproblems </label>
+      <label><input type="radio" name="q4"> Randomness</label>
+      <label><input type="radio" name="q4"> Backtracking</label>
+    </div>
+
+    <div class="mcq-question">
+      <p><strong>Q5:</strong> What is the time complexity of binary search on a sorted array?</p>
+      <label><input type="radio" name="q5"> O(n)</label>
+      <label><input type="radio" name="q5"> O(log n) </label>
+      <label><input type="radio" name="q5"> O(1)</label>
+      <label><input type="radio" name="q5"> O(n²)</label>
+    </div>
+
+    <div class="submit-btn-container" style="text-align: center; margin-top: 30px;">
+  <button id="submitBtn" class="submit-btn">Submit Answers</button>
+    </div>
+
   </section>
 
-  <section data-aos="fade-up">
-    <h3>Start Solving Now</h3>
-    <p style="text-align:center">
-      <a href="Signup.html" class="button">Register</a> to begin your journey. Already joined? <a href="login.html">Log in</a>.
-    </p>
-  </section>
 
-  <hr/>
-<footer class="site-footer">
+  <footer class="site-footer">
   <h2>Explore Top Courses for CS Students</h2>
 
   <div class="footer-column">
@@ -139,8 +132,44 @@
   </div>
 </footer>
 
-  <script>
-    AOS.init();
-  </script>
+<script>
+  AOS.init();
+
+  const correctAnswers = {
+    q1: 2,  
+    q2: 1, 
+    q3: 1, 
+    q4: 1, 
+    q5: 1 
+  };
+
+  document.getElementById("submitBtn").addEventListener("click", function () {
+    let score = 0;
+    for (let q in correctAnswers) {
+      const options = document.getElementsByName(q);
+      options.forEach((opt, index) => {
+        opt.parentElement.style.backgroundColor = "#f9f9f9"; // reset
+        opt.parentElement.style.fontWeight = "normal";
+
+        if (opt.checked) {
+          if (index === correctAnswers[q]) {
+            opt.parentElement.style.backgroundColor = "#d4edda"; // green for correct
+            opt.parentElement.style.fontWeight = "bold";
+            score++;
+          } else {
+            opt.parentElement.style.backgroundColor = "#f8d7da"; // red for wrong
+          }
+        }
+      });
+
+      const correctIndex = correctAnswers[q];
+      options[correctIndex].parentElement.style.backgroundColor = "#d4edda";
+      options[correctIndex].parentElement.style.fontWeight = "bold";
+    }
+
+    alert("You scored " + score + " out of 5!");
+  });
+</script>
+
 </body>
 </html>
